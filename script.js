@@ -1,8 +1,7 @@
-function startLearning() {
-  window.location.href = "quizzes.html"; // ou outro link real
+function startQuiz() {
+  window.location.href = "sobre.html";
 }
 
-// Animação ao rolar com Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-in");
 
@@ -11,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // anima só uma vez
+          observer.unobserve(entry.target);
         }
       });
     },
@@ -22,12 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   elements.forEach((el) => observer.observe(el));
 
-  // Menu Sanduíche (Modificado)
   const menuBtn = document.querySelector(".menu-btn");
-  const navMenu = document.querySelector("nav"); // Seleciona o nav existente
+  const navMenu = document.querySelector("nav");
 
   menuBtn.addEventListener("click", () => {
-    navMenu.classList.toggle("menu-active"); // Nova classe para evitar conflito
-    menuBtn.classList.toggle("active"); // Mantém a animação do botão
+    navMenu.classList.toggle("menu-active");
+    menuBtn.classList.toggle("active");
   });
 });
