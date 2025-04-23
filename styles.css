@@ -13,12 +13,11 @@ body {
   flex-direction: column;
 }
 
-/* Estilos do Cabeçalho (Modificado) */
 header {
   background-color: #1a1b20;
   padding: 20px 40px;
   display: flex;
-  justify-content: flex-start; /* Alinhamento à esquerda */
+  justify-content: space-between;
   align-items: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -27,13 +26,14 @@ header h1 {
   font-size: 2rem;
   font-weight: 800;
   color: #4fd1c5;
-  margin-right: auto; /* Empurra o título para a esquerda */
+  margin-right: auto;
 }
 
-/* Estilos do Menu Sanduíche (Mantenha como está) */
 .menu-btn {
   display: flex;
-  height: 25px;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
   width: 30px;
   cursor: pointer;
   position: relative;
@@ -44,14 +44,13 @@ header h1 {
 }
 
 .menu-btn .menu-icon {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+  position: relative;
+  display: block;
   width: 30px;
   height: 3px;
   background-color: #ffffff;
   transition: background-color 0.3s ease-in-out;
+  margin: 0 auto;
 }
 
 .menu-btn .menu-icon::before,
@@ -62,6 +61,8 @@ header h1 {
   height: 3px;
   background-color: #ffffff;
   transition: transform 0.3s ease-in-out;
+  left: 0;
+  transform-origin: center;
 }
 
 .menu-btn .menu-icon::before {
@@ -72,20 +73,21 @@ header h1 {
   top: 8px;
 }
 
-/* Animação do Botão (Mantenha como está) */
 .menu-btn.active .menu-icon {
   background-color: transparent;
 }
 
 .menu-btn.active .menu-icon::before {
-  transform: rotate(-45deg) translate(-7px, 6px);
+  top: 0;
+  transform: rotate(-45deg);
 }
 
 .menu-btn.active .menu-icon::after {
-  transform: rotate(45deg) translate(-7px, -6px);
+  top: 0;
+  transform: rotate(45deg);
+
 }
 
-/* Estilos da Navegação (Mantenha como está) */
 nav {
   display: flex;
   align-items: center;
@@ -111,7 +113,6 @@ nav a:hover {
   color: #4fd1c5;
 }
 
-/* Estilos do Conteúdo Principal (Mantenha como está) */
 main {
   flex: 1;
   display: flex;
@@ -153,7 +154,6 @@ main {
   background-color: #38b2ac;
 }
 
-/* Estilos do Rodapé (Mantenha como está) */
 footer {
   text-align: center;
   padding: 20px;
@@ -162,7 +162,6 @@ footer {
   color: #94a3b8;
 }
 
-/* Estilos da Página Sobre (Mantenha como está) */
 .sobre {
   flex: 1;
   padding: 60px 20px;
@@ -188,6 +187,7 @@ footer {
 .sobre h3 {
   font-size: 1.5rem;
   margin-top: 30px;
+  margin-bottom: 10px;
   color: #ffffff;
 }
 
@@ -208,7 +208,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Estilos da Animação (Mantenha como está) */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
