@@ -1,10 +1,8 @@
-// Função para controlar o menu de navegação
-document.getElementById("menu-toggle").addEventListener("click", function () {
-  const menu = document.getElementById("menu");
-  menu.classList.toggle("visible");
-});
+function startLearning() {
+  window.location.href = "quizzes.html"; // ou outro link real
+}
 
-// Animação de fade-in para os elementos
+// Animação ao rolar com Intersection Observer
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-in");
 
@@ -13,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
+          observer.unobserve(entry.target); // anima só uma vez
         }
       });
     },
@@ -23,4 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   elements.forEach((el) => observer.observe(el));
+
+  // Menu Sanduíche (Modificado)
+  const menuBtn = document.querySelector(".menu-btn");
+  const navMenu = document.querySelector("nav"); // Seleciona o nav existente
+
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("menu-active"); // Nova classe para evitar conflito
+    menuBtn.classList.toggle("active"); // Mantém a animação do botão
+  });
 });
