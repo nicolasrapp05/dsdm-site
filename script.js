@@ -1,8 +1,10 @@
-function startLearning() {
-  window.location.href = "quizzes.html"; // ou outro link real
-}
+// Função para controlar o menu de navegação
+document.getElementById("menu-toggle").addEventListener("click", function () {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("visible");
+});
 
-// Animação ao rolar com Intersection Observer
+// Animação de fade-in para os elementos
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-in");
 
@@ -11,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("visible");
-          observer.unobserve(entry.target); // anima só uma vez
+          observer.unobserve(entry.target);
         }
       });
     },
