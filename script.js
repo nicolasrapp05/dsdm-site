@@ -29,3 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     menuBtn.classList.toggle("active");
   });
 });
+
+document.getElementById('logo-title').addEventListener('click', function() {
+  window.location.href = 'index.html';
+});
