@@ -1,5 +1,13 @@
 function startQuiz() {
+  window.location.href = "quizzes.html";
+}
+
+function startSobre() {
   window.location.href = "sobre.html";
+}
+
+function startEstudo() {
+  window.location.href = "estudoDeCaso.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -30,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-document.getElementById('logo-title').addEventListener('click', function() {
-  window.location.href = 'index.html';
+document.getElementById("logo-title").addEventListener("click", function () {
+  window.location.href = "index.html";
 });
