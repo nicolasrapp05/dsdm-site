@@ -222,3 +222,60 @@ footer {
 #logo-title {
   cursor: pointer;
 }
+
+#difficulty-selection button {
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #4fd1c5;
+  color: #1a1b20;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.main-quiz button:hover {
+  background-color: #38b2ac;
+}
+
+#answers button {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #4fd1c5;
+  color: #1a1b20;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#answers button:hover {
+  background-color: #38b2ac;
+}
+
+#next-button {
+  display: block;
+  width: 50%;
+  margin: 8px 0;
+  padding: 15px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  background-color: #4fd1c5;
+  color: #1a1b20;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#difficulty-selection h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
